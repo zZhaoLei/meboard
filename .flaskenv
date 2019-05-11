@@ -1,0 +1,2 @@
+FLASK_APP=meboard
+FLASK_ENV=development
