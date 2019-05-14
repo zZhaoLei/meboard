@@ -11,4 +11,5 @@ app.jinja_env.lstrip_blocks = True
 
 db = SQLAlchemy(app)
 
-from meboard import views, models, commands
+# 放在最后一行，防止循环导包的问题
+from meboard import views, models, commands, forms
