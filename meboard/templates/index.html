@@ -1,9 +1,10 @@
 {% extends 'base.html' %}
 {% from 'macros.html' import form_field %}
+{% from 'bootstrap/form.html' import render_form %}
 
 {% block content %}
 <div class="hello-form">
-    <form action="{{ request.full_path }}" method="post">
+    <!-- <form action="{{ request.full_path }}" method="post">
         {{ form.csrf_token }}
         <div class="form-group required">
             {{ form_field(form.name, class='form-control') }}
@@ -12,7 +13,8 @@
             {{ form_field(form.body, class='form-control') }}
         </div>
         {{ form.submit(class='btn btn-secondary') }}
-    </form>
+    </form> -->
+    {{ render_form(form, action=request.full_path) }}
 </div>
 <h5>
     <br>当前已有 {{ messages|length }} 条消息!

@@ -2,7 +2,7 @@
 # -*- coding:utf-8 -*-
 
 from flask import flash, redirect, url_for, render_template
-from meboard import app, db
+from meboard import app, db, bootstrap
 from meboard.models import Message
 from meboard.forms import LeavForm
 
@@ -19,4 +19,4 @@ def index():
         db.session.commit()
         flash('你的消息已经发送给整个世界！')
         return redirect(url_for('index'))
-    return render_template('index.html', form=form, messages=messages)
+    return render_template('index.html', form=form, messages=messages, bootstrap=bootstrap)
