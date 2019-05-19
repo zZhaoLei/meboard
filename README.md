@@ -9,6 +9,10 @@ meboard
 安装requirements.txt中的依赖包
 `pip install -r requirements.txt`
 
+### 初始化数据库
+使用命令`flask initdb`，会创建数据库
+使用命令`flask initdb --drop`，会删除并创建数据库
+
 ### 启动flask项目
 进入项目的meboard根目录，使用`flask run`启动项目，默认时`development`模式, 可自行修改`meboard/.flaskenv`中的`FLASK_ENV`变量值为`production`。
 
